@@ -70,7 +70,7 @@ func (p *Prometheus) expose(hCh chan *decoder.HEP) {
 		if pkt != nil && pkt.ProtoType == 5 {
 			if !p.TargetEmpty {
 				if p.perMSGDebug {
-						logp.Info("perMSGDebug-sendto(checkTargetPrefix): ,Payload,%s", p.Payload)
+						logp.Info("perMSGDebug-sendto(checkTargetPrefix): ,Payload,%s", pkt.Payload)
 						p.count++
 				}
 				p.checkTargetPrefix(pkt)
