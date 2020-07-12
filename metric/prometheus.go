@@ -1,14 +1,14 @@
 package metric
 
 import (
-	"encoding/binary"
+	//"encoding/binary"
 	"fmt"
 	"strings"
 	"sync"
-	"regexp"
-	"time"
-	"os"
-	"bufio"
+	//"regexp"
+	//"time"
+	//"os"
+	//"bufio"
 
 	"github.com/games130/logp"
 	"github.com/games130/heplify-server-metricRTCP/config"
@@ -59,7 +59,7 @@ func (p *Prometheus) setup() (err error) {
 func (p *Prometheus) expose(hCh chan *decoder.HEP) {
 	for pkt := range hCh {
 		if p.perMSGDebug {
-				logp.Info("perMSGDebug-prom: ,Count,%s, SrcIP,%s, DstIP,%s, CID,%s, FirstMethod,%s, FromUser,%s, ToUser,%s", p.count, pkt.SrcIP, pkt.DstIP, pkt.CallID, pkt.FirstMethod, pkt.FromUser, pkt.ToUser)
+				logp.Info("perMSGDebug-prom: ,Count,%s, SrcIP,%s, DstIP,%s, CID,%s", p.count, pkt.SrcIP, pkt.DstIP, pkt.CID)
 				p.count++
 		}
 		
