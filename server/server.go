@@ -146,7 +146,7 @@ func (h *HEPInput) hepWorker() {
 			hepPkt, _ := decoder.DecodeHEP(msg)
 			
 			if h.perMSGDebug {
-				logp.Info("perMSGDebug: ,HEPCount,%s, SrcIP,%s, DstIP,%s, CID,%s, FirstMethod,%s, FromUser,%s, ToUser,%s", h.stats.HEPCount, hepPkt.SrcIP, hepPkt.DstIP, hepPkt.CallID, hepPkt.FirstMethod, hepPkt.FromUser, hepPkt.ToUser)
+				logp.Info("perMSGDebug: ,HEPCount,%s, SrcIP,%s, DstIP,%s, CID,%s", h.stats.HEPCount, hepPkt.SrcIP, hepPkt.DstIP, hepPkt.CID)
 			}
 			
 			h.statsCount(hepPkt.FirstMethod)
