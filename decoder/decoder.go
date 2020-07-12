@@ -38,7 +38,7 @@ type HEP struct {
 }
 
 // DecodeHEP returns a parsed HEP message
-func DecodeHEP(packet *proto.Event) (*HEP, error) {
+func DecodeHEP(packet *proto.RTCPpkt) (*HEP, error) {
 	hep := &HEP{}
 	
 	hep.Version      = packet.GetVersion()
