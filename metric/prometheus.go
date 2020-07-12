@@ -66,7 +66,7 @@ func (p *Prometheus) expose(hCh chan *decoder.HEP) {
 		//logp.Info("exposing some packet %s and %s", pkt.CID, pkt.FirstMethod)
 		//fmt.Println("exposing some packet %s and %s", pkt.CID, pkt.FirstMethod)
 
-		var st, dt string
+		//var st, dt string
 		if pkt != nil && pkt.ProtoType == 5 {
 			if !p.TargetEmpty {
 				p.checkTargetPrefix(pkt)
